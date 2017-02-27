@@ -1,0 +1,53 @@
+{
+  "name": "simple-ui_rise",
+  "version": "1.0.0",
+  "description": "A set of Typescript decorators for dependency injection",
+  "main": "lib/index.ts",
+  "private": false,
+  "files": [
+    "lib/",
+    "test/",
+    "CHANGELOG.MD",
+    "README.MD"
+  ],
+  "scripts": {
+    "clean": "rm -Rf lib/*.js; rm -Rf lib/*.js.map; rm -Rf test/*.js; rm -Rf test/*.js.map;",
+    "build": "tsc -p . --outDir dist/",
+    "test": "tsc -p . --outDir dist/ && mocha --recursive dist/",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "coveralls": "npm run coverage",
+    "postcoveralls": "rm -Rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:simple-ui/rise.git"
+  },
+  "keywords": [
+    "dependency",
+    "injection"
+  ],
+  "author": "Michael Jaworski <mjaworski@acm.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simple-ui/rise/issues"
+  },
+  "homepage": "https://github.com/simple-ui/rise#readme",
+  "dependencies": {
+    "@types/lodash": "4.14.53",
+    "lodash": "4.17.4"
+  },
+  "devDependencies": {
+    "typescript": "2.1.5",
+    "@types/chai": "3.4.34",
+    "@types/mocha": "2.2.38",
+    "chai": "3.5.0",
+    "coveralls": "2.11.15",
+    "gulp": "3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-typescript": "3.1.5",
+    "gulp-uglify": "^2.0.1",
+    "istanbul": "0.4.5",
+    "mocha": "3.2.0",
+    "mocha-lcov-reporter": "1.2.0"
+  }
+}

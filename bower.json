@@ -1,0 +1,27 @@
+{
+  "name": "simple-ui_rise",
+  "version": "1.0.0",
+  "homepage": "https://github.com/simple-ui/rise",
+  "authors": [
+    "Michael Jaworski <mjaworski@acm.org>"
+  ],
+  "description": "A set of Typescript decorators for dependency injection",
+  "main": "lib/index.js",
+  "private": false,
+  "keywords": [
+    "dependency",
+    "injection"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "benchmark"
+  ],
+  "dependencies": {
+    "lodash": "4.17.4"
+  }
+}
